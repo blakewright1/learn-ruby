@@ -23,7 +23,7 @@ class Question
       puts "correct!"
       return true
     else
-      puts "incorrect"
+      puts "incorrect, the correct answer was " + @correct_answer.to_s
       return false
     end
   end
