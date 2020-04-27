@@ -3,6 +3,7 @@
 arr = [0, 1, 2, 3, 4, 5, 6, 7, 8]
 play = true
 
+#if one of these sets of numbers are all equal the game is over
 winPatterns = Array[[0,1,2],
                     [0,3,6],
                     [0,4,8],
@@ -11,6 +12,8 @@ winPatterns = Array[[0,1,2],
                     [2,4,6],
                     [3,4,5],
                     [6,7,8]]
+
+#method to see if either player has won
 def checkWin(winPatterns, arr)
   for i in winPatterns
     if arr[i[0]] == arr[i[1]] && arr[i[0]] ==arr[i[2]]
@@ -20,6 +23,7 @@ def checkWin(winPatterns, arr)
   return false
 end
 
+#display the current board
 def printBoard(arr)
   puts "  " + arr[0].to_s + "  |  " + arr[1].to_s + "  |  " + arr[2].to_s
   puts "-----------------------"
@@ -55,5 +59,4 @@ while play
 end
 
 printBoard(arr)
-puts "winner is " + currentPlayer
-#print winner
+puts "winner is " + currentPlayer #print winner, whoever went last was winner

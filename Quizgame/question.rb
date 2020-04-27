@@ -1,4 +1,5 @@
 class Question
+  #initializer run upon creation of a new Question
   def initialize(s, a, b, c, d, correct)
     @sentence = s
     @option1 = a
